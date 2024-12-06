@@ -23,6 +23,7 @@ Before running the project, make sure you have Node.js installed:
    ```
 
 3. Check npm installation:
+
    ```bash
    npm --version
    ```
@@ -57,10 +58,10 @@ To run the project locally:
 
 The dev server will start at http://localhost:4321 by default.
 
-## Branches
+## Branch Management and Deployment Strategy
 
-The site will deployed by Github Actions with the `deploy` branch
+The site is automatically deployed by Github Actions with the `deploy` branch.
 
-You should not directly make commit to `deploy` branch, commit / send pull request to `main` then commits in main will rebase into `deploy`
+The `deploy` branch should not be directly commited, anyone want to do collaboration should commit to `main` branch (contributer) or send pull request to `main`
 
-這個做法能夠保護 deploy 上的網站遭受過多意外，同時避免太頻繁的 github actions
+保護網站被即時性的錯誤影響，同時避免太頻繁的 auto deploy

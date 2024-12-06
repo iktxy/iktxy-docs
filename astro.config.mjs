@@ -16,12 +16,16 @@ export default defineConfig({
             },
             sidebar: [
                 {
-                    label: "Guides",
-                    items: [
-                        // Each item here is one entry in the navigation menu.
-                        { label: "Example Guide", slug: "guides/example" },
-                    ],
+                    label: "About this docs",
+                    autogenerate: { directory: "about-this-docs" },
                 },
+                // {
+                //     label: "Guides",
+                //     items: [
+                //         // Each item here is one entry in the navigation menu.
+                //         { label: "Example Guide", slug: "guides/example" },
+                //     ],
+                // },
                 {
                     label: "Reference",
                     autogenerate: { directory: "reference" },
@@ -31,8 +35,13 @@ export default defineConfig({
                     autogenerate: { directory: "specs" },
                 },
                 {
+                    label: "Bakend",
+                    autogenerate: { directory: "backend" },
+                },
+                {
                     label: "Meeting Notes",
                     autogenerate: { directory: "meeting-notes" },
+                    collapsed: true,
                 },
             ],
         }),
